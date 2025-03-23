@@ -5,18 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-		"start": "vite start",
+    "start": "vite start",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-		"docker:up": "docker compose up -d --build && npm run docker:logs",
+    "docker:up": "docker compose up -d --build && npm run docker:logs",
     "docker:down": "docker compose down",
     "docker:logs": "docker compose logs -f vstream-docs",
     "docker:attach": "docker exec -it vstream-docs sh"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.0.15",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwindcss": "^4.0.15"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -31,7 +33,7 @@
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
   },
-	"optionalDependencies": {
+  "optionalDependencies": {
     "@rollup/rollup-linux-x64-musl": "4.9.5"
   }
 }
