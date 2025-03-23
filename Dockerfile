@@ -34,4 +34,4 @@ FROM httpd:2.4 AS production
 
 WORKDIR /usr/local/apache2/htdocs/
 
-COPY --from=setup /app/dist /usr/local/apache2/htdocs/
+COPY --from=build /app/dist /usr/local/apache2/htdocs/
