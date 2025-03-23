@@ -19,7 +19,7 @@ function App() {
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center mb-4 md:mb-0">
             <h1 className="text-3xl font-bold text-indigo-400">vstream-api</h1>
-            <span className={`ml-4 px-3 py-1 bg-${isOnline ? 'green' : 'red'}-600 text-white text-xs rounded-full`}>{isOnline ? 'ONLINE' : 'OFFLINE'}</span>
+            <span className={`ml-4 px-3 py-1 ${isOnline ? 'bg-green-600' : 'bg-red-600'} text-white text-xs rounded-full`}>{isOnline ? 'ONLINE' : 'OFFLINE'}</span>
           </div>
           <nav>
             <ul className="flex space-x-6">
@@ -222,7 +222,7 @@ function App() {
         <div className="container mx-auto text-center text-gray-400">
           <p>© 2025 vstream-api | Created by Vinicius José</p>
           <p className="mt-2 text-sm">
-            Status: <span className={`text-${isOnline ? 'green' : 'red'}-400`}>{isOnline ? 'Online' : 'Offline'}</span> | 
+            Status: <span className={`${isOnline ? 'text-green-400' : 'text-red-400'}`}>{isOnline ? 'Online' : 'Offline'}</span> | 
             <a href="https://github.com/viniciusjosedev/vstream-api" className="ml-2 hover:text-indigo-400 transition-colors">
               View on GitHub
             </a>
