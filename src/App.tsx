@@ -41,7 +41,7 @@ function App() {
                       onClick={() => setActiveTab(tab)}
                       className={`w-full text-left px-4 py-2 rounded ${
                         activeTab === tab ? 'bg-indigo-600 text-white' : 'hover:bg-gray-700'
-                      } transition-colors`}
+                      } transition-colors cursor-pointer`}
                     >
                       {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </button>
