@@ -1,0 +1,18 @@
+networks:
+  vstream:
+    driver: bridge
+
+services:
+  vstream-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ${NODE_ENV}
+    container_name: vstream-docs
+    networks:
+      - vstream
+    volumes:
+      - .:/app
+      - ./node_modules:/app/node_modules
+    ports:
+      - "${VITE_PORT}:5173"
